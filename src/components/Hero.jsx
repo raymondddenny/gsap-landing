@@ -55,22 +55,6 @@ function Hero() {
 		const startValue = isMobile?'top 50%' :	'center 60%';
 		const endValue = isMobile? '120% top': 'bottom top';
 
-		//animate video on scroll
-		let lastVideoTime = 0;
-		let rafId = null;
-
-		const smoothVideoUpdate = (progress) => {
-			const video = videoRef.current;
-			if (video && video.duration) {
-				const targetTime = progress * video.duration;
-
-				// Only update if there's a meaningful change (prevents unnecessary seeks)
-				if (Math.abs(targetTime - lastVideoTime) > 0.05) { // 50ms threshold
-					lastVideoTime = targetTime;
-					video.currentTime = targetTime;
-				}
-			}
-		};
 
 		const videoTimeline = gsap.timeline({
 			scrollTrigger: {
