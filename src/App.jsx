@@ -5,17 +5,19 @@ import Cocktails from "./components/Cocktails";
 import Navbar from "./components/Navigation";
 import About from "./components/About";
 import Art from "./components/Art";
+import Menu from "./components/Menu";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function App() {
-	return (
-		<main>
-			<Navbar />
-			<Hero />
-			<Cocktails />
-			<About />
-			<Art />
-		</main>
-	);
+  return (
+    <main>
+      <Navbar />
+      <Hero />
+      <Cocktails />
+      <About />
+      <Art />
+      <Menu />
+    </main>
+  );
 }
